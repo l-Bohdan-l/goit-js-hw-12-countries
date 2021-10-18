@@ -16,19 +16,13 @@ function clearCountries() {
 
 function findCountry(e) {
     clearCountries();
-    // console.log(e.target.value);
     let searchQuery = e.target.value;
-    fetchCountries(searchQuery);
-    // let counrtyMarkup = countryTemplate(fetchCountries(searchQuery));
-    // countryCard.insertAdjacentHTML('beforeend', counrtyMarkup)
+    fetchCountries(searchQuery);    
 }
 
 function createCountryCard(e) {
     e.preventDefault()
-    clearCountries();
-    console.log(e.target.textContent)
+    clearCountries();    
     let tagretCountry = e.target.textContent;
-    fetchCountries(tagretCountry);
-    // let counrtyMarkup = countryTemplate(data);
-    // countryCard.insertAdjacentHTML('beforeend', counrtyMarkup)
+    fetchCountries(tagretCountry);    
 }

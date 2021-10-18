@@ -41,20 +41,20 @@ export default function fetchCountries(searchQuery) {
                     stack: myStack,
                 });
             }
-            console.log("result", result)
+            // console.log("result", result)
             return result.json()
         })
         .then((data) => {
             if (data.length === 1) {
-                console.log('data', data)
+                // console.log('data', data)
                 let counrtyMarkup = countryTemplate(data);
                 countryCard.insertAdjacentHTML('beforeend', counrtyMarkup)
             } else if (data.length >= 2 && data.length <= 10) {
-                console.log('data else if', data)
+                // console.log('data else if', data)
                 let countriesListMarkup = counrtyListMarkup(data);
                 countryList.insertAdjacentHTML('beforeend', countriesListMarkup)
             } else if (data.length > 10) {
-                console.log('data else', data)                
+                // console.log('data else', data)                
                 const manycountriesError = error({
                     title: 'Oh no!',
                     text: "Too many matches fond. Please enter a more specific query",
